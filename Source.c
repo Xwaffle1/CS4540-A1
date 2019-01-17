@@ -8,6 +8,7 @@
 #include "interactive.h"
 
 void getArrs(zipTowns * arrs, int size) {  // mallocs arrays of size elements
+	printf("%d\n", size);
 	arrs->zips = (int *) malloc(sizeof(int) * size);
 	arrs->towns = (city **) malloc(sizeof(city*) * size);
 	arrs->cities = (city *) malloc(sizeof(city) * size);
@@ -50,13 +51,12 @@ int getArgsInfoOpenFile(int argc, char * argv[], FILE ** infile, int * size) // 
 	}
 	char * fileName = argv[1];
 	int sizeNum = atoi(argv[2]);
-	size = &sizeNum;
+	*size  = sizeNum;
 	if(sizeNum < 1){
 		return retval;
 	}
 	// attempt to open file
-	FILE * file = fopen(fileName, "r");
-	infile = &file;
+	*infile = fopen(fileName, "r");
 	// return file and size in parameters or error
 	return retval;
 }
