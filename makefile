@@ -13,7 +13,7 @@ interactive.o: structs.h interactive.h
 readfile.o: structs.h
 
 run:
-	./a1 zip_code_sample.txt 5
+	./a1 zip_code_sample.txt 30
 
 clean:
 	rm -f *.o a1
