@@ -10,7 +10,7 @@ Source.o: structs.h interactive.h readfile.h
 
 interactive.o: structs.h interactive.h
 
-readfile.o: structs.h
+readfile.o: structs.h readfile.h
 
 run:
 	./a1 zip_code_sample.txt 30

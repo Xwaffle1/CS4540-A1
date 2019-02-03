@@ -8,7 +8,7 @@
 #include "interactive.h"
 
 void getArrs(zipTowns * arrs, int size) {  // mallocs arrays of size elements
-	printf("%d\n", size);
+	// printf("%d\n", size);
 	arrs->zips = (int *) malloc(sizeof(int) * size);
 	arrs->towns = (city **) malloc(sizeof(city*) * size);
 	arrs->cities = (city *) malloc(sizeof(city) * size);

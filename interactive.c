@@ -17,7 +17,7 @@ void doInteractive(zipTowns arrs, int length){
       printf("%s\n", "Goodbye!");
     }else if(option == 2){
       printf("%s\n", "Please enter a 5 Digit zip code to search for: ");
-      char input[5];
+      char input[20];
       scanf("%s", input);
       int index = searchZip(arrs, input, length);
       if(index == -1){

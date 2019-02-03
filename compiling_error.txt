@@ -1,9 +1,0 @@
-/home/sweeney/OperatingSystems/A1/readfile.c: In function ‘readFile’:
-/home/sweeney/OperatingSystems/A1/readfile.c:9:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
-     strcpy(buffer, "");
-     ^~~~~~
-/home/sweeney/OperatingSystems/A1/readfile.c:9:5: warning: incompatible implicit declaration of built-in function ‘strcpy’
-/home/sweeney/OperatingSystems/A1/readfile.c:9:5: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
-/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o: In function `_start':
-(.text+0x20): undefined reference to `main'
-collect2: error: ld returned 1 exit status
