@@ -1,12 +1,9 @@
 CC = gcc
 CFLAGS = -ggdb -Wall -pedantic -std=c11
 
-all: Source
-	mv Source a1
+a1: interactive.o readfile.o a1.o
 
-Source: interactive.o readfile.o Source.o
-
-Source.o: structs.h interactive.h readfile.h
+a1.o: structs.h interactive.h readfile.h
 
 interactive.o: structs.h interactive.h
 

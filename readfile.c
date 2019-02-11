@@ -14,12 +14,11 @@ void readFile(zipTowns arrs, FILE * infile, int * length){
     city * newTown = &arrs.cities[index];
     int zip = atoi(zipText);
     newTown->zip = 0; // init zip for struct
-    newTown->town = malloc(sizeof(strlen(cityTown) + 1)); // init town for struct
+    newTown->town = malloc(strlen(cityTown) + 1); // init town for struct
     newTown->zip = zip;
 
 
     strcpy(newTown->town, cityTown);
-    arrs.cities[index] = *newTown; // Don't think I need this.
     insertTown(&newTown, arrs, index);
     insertZipCode(arrs, index);
     index++;
