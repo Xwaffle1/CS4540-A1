@@ -45,7 +45,7 @@ void doInteractive(zipTowns arrs, int length){
 
 int searchTown(zipTowns arrs, char search[], int length){
   int left = 0;
-  int right = length;
+  int right = length - 1;
   while (left <= right) {
     int mid = left + (right - left) / 2;
     char * currentTown = arrs.towns[mid]->town;
@@ -61,7 +61,7 @@ int searchTown(zipTowns arrs, char search[], int length){
 
 int searchZip(zipTowns arrs, char search[], int length){
   int left = 0;
-  int right = length;
+  int right = length - 1;
   int zipVal = (int) atoi(search);
   while (left <= right) {
     int mid = left + (right - left) / 2;

@@ -38,6 +38,15 @@ int main(int argc, char * argv[]) {
 	printf("press any key: ");
 	getc(stdin);
 
+	for (int i=0; i<length; i++) {
+		city * cur = arrs.towns[i];
+		// printf("FREED: %s\n", cur->town);
+    free(cur->town);
+	}
+	free(arrs.zips);
+	free(arrs.towns);
+	free(arrs.cities);
+
 	return ret;
 }
 
